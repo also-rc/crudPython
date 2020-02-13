@@ -52,7 +52,7 @@ if __name__ == '__main__':
         e4.configure(text=None)
         e5.configure(text=None)
 
-    """GUI AQUÍ"""
+    ############################################"""GUI AQUÍ"""##########################################################
 
     m = tk.Tk()
     m.geometry('350x300')
@@ -78,17 +78,13 @@ if __name__ == '__main__':
     e4.grid(row=3, column=1)
     e5.grid(row=4, column=1)
 
+    #############################BOTONES##############################
 
-
-
-
-    btnInsert = tk.Button(m, text = 'Insert', width=20, command=btnInsertClicked,  bg='yellow').grid(row=5, column=1)
-    btnUpdate = tk.Button(m, text='Update', width=20, command=btnUpdateClicked, bg='yellow').grid(row=6, column=1)
-    btnDelete = tk.Button(m, text='Delete', width=20, command=btnDeleteClicked, bg='yellow').grid(row=7, column=1)
+    btnInsert  = tk.Button(m, text = 'Insert', width=20, command=btnInsertClicked,  bg='yellow').grid(row=5, column=1)
+    btnUpdate  = tk.Button(m, text='Update', width=20, command=btnUpdateClicked, bg='yellow').grid(row=6, column=1)
+    btnDelete  = tk.Button(m, text='Delete', width=20, command=btnDeleteClicked, bg='yellow').grid(row=7, column=1)
     btnReadOne = tk.Button(m, text='ReadOne', width=20, command=btnReadOneClicked, bg='yellow').grid(row=8, column=1)
-    btnReadAll = tk.Button(m, text='ReadOne', width=20, command=btnReadAllClicked, bg='yellow').grid(row=9, column=1)
-
-
+    btnReadAll = tk.Button(m, text='ReadAll', width=20, command=btnReadAllClicked, bg='yellow').grid(row=9, column=1)
 
 
 

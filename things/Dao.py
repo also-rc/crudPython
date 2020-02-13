@@ -1,8 +1,9 @@
 from connec2 import connectionDB
 
 class Dao(object):
-    sentencia:None
-    myCdb= connectionDB.ConnectionDB()
+    myCdb: None
+    def __init__(self):
+        self.myCdb = connectionDB.ConnectionDB()
 
     def insert(self, Jugador):
         preSentencia = """INSERT INTO jugador (id,nombre,apellido,edad,salario) VALUES (%s,%s,%s,%s,%s) """
@@ -22,12 +23,11 @@ class Dao(object):
     def readOne(self, Jugador):
         preSentencia = """SELECT * FROM jugador WHERE id = %s """
         toReadOne = (Jugador.getId(),)
-        self.myCdb.executeOneQuery(preSentencia,toReadOne)
+        self.myCdb.executeOne(preSentencia, toReadOne)
+        #self.myCdb.executeOne(preSentencia,toReadOne)
 
     def readAll(self):
-        preSentencia = """SELECT * FROM jugador """
+        toRead = """SELECT * FROM jugador """
         #toRead = ('jugador')
-        self.myCdb.executeQuery(preSentencia)
-
-
-
+        #self.myCdb.executeQuery(preSentencia)
+        self.myCdb.executeOne(" ",toRead)
